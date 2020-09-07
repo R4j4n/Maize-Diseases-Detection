@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+
+      html body{
+        font-family: sans-serif;
+      }
+
+      .header{
+        background:#f8f8f8;
+        margin-bottom:50px;
+        padding: 20px;
+      }
+
+      .file-input-container{
+        margin: 100px 0px;
+      }
+      .file-input{
+        border:2px solid #cdcdcd;
+        border-radius: 10px;
+        padding:10px;
+      }
+      .file-submit{
+        border-radius: 20px;
+        border: none;
+        padding: 10px 50px;
+        box-shadow: 1px 1px 3px #f8f8f8;
+        margin: 10px;
+      }
+      .file-submit:hover{
+        background: green;
+        color: white;
+      }
+
+      .sample_image{
+        box-shadow: 1px 1px 5px white;
+        border-radius: 2px;
+      }
+
+      .example{
+        margin: 50px 0px;
+      }
+
+      .example p{
+        color: #b3b3b3;
+      }
+
+      .example img{
+        padding: 10px;
+      }
+
+    
+      .footer{
+        background: #f8f8f8;
+        padding: 50px 20px;
+      }
+      .footer ul{
+        list-style-type: none;
+      }
+      .footer ul li{
+        display: inline-block;
+        padding:10px 20px;
+        background: #ffffff;
+        border-radius: 50px;
+        margin: 5px;
+      }
+      .footer ul li a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="header">
+        <h1 class="text-center title">Crop Disease Diagnosis</h1>
+        <p class="text-center description">Maize disease detection using Deep Convolutional Neural Network.</p>
+    </div>
+    
+    <div class="container">
+      <div class="text-center file-input-container">
+        <form action = "/predict" method = "post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input" placeholder="Pick a File"/>
+        </br>            
+            <input type = "submit" value="Predict" class="file-submit" />
+        </form>
+          <p>{{ error }}</p>
+      </div>
+
+      <div class="text-center example">
+        <p>* Image should only contain the diseased part as shown below.</p >
+        <p>* You can click the images provided below to download for testing purpose.</p >
+        <a href="/download-image/sample_image_1.jpg" target="blank">
+          <img src="static/sample_image_1.jpg" width="200px" height="200px" class="sample_image" title="Maize Image" alt="Maize Image">
+        </a>
+        <a href="/download-image/sample_image_2.jpg" target="blank">
+          <img src="static/sample_image_2.jpg" width="200px" height="200px" class="sample_image" title="Maize Image" alt="Maize Image">
+        </a>
+        <a href="/download-image/sample_image_3.jpg" target="blank">
+          <img src="static/sample_image_3.jpg" width="200px" height="200px" class="sample_image" title="Maize Image" alt="Maize Image">
+        </a>
+      </div>
+
+    </div>
+
+  <div class="footer">
+    <p>Developed By:</p>
+    <ul>
+      <li><a href="https:facebook.com/R1j1n" target="_blank"><i class="fa fa-facebook-square"></i> Rajan Ghimire</a></li>
+      <li>
+        <a href="https:facebook.com/gprabes" target="_blank"><i class="fa fa-facebook-square"></i> Prabesh Ghimire</a></li>
+    </ul>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+       html body{
+        font-family: sans-serif;
+      }
+
+      .header{
+        background:#f8f8f8;
+        margin-bottom:50px;
+        padding: 20px;
+      }
+
+      .disease-details{
+        display: flex;
+        background: #f8f8f8;
+        border-radius: 20px;
+        margin:50px 10px;
+        border: 1px solid gray;
+      }
+
+      .disease-details .details{
+        padding: 20px;
+      }
+
+      .disease-details .details p{
+        font-size: 20px;
+      }
+
+      .footer{
+        background: #f8f8f8;
+        padding: 50px 20px;
+      }
+      .footer ul{
+        list-style-type: none;
+      }
+      .footer ul li{
+        display: inline-block;
+        padding:10px 20px;
+        background: #ffffff;
+        border-radius: 50px;
+        margin: 5px;
+      }
+      .footer ul li a{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .try-next a{
+        padding:10px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        background: #f8f8f8;
+        border: 1px solid gray;
+      }
+
+      .crop-img{
+        width:300px;
+        height: 300px;
+        padding: 10px;
+      }
+
+    </style>
+</head>
+<body>
+  <div class="header">
+    <h1 class="text-center title">Crop Disease Diagnosis</h1>
+    <p class="text-center description">Maize disease detection using Convolutional Neural Network.</p>
+  </div>
+
+  <div class="container">
+      <div class="row disease-details">
+        <div class="col-sm-6" style="margin: 0px;">
+          <img src="{{ user_image }}" alt="User Image" class="crop-img rounded">
+        </div>
+        <div class="col-sm-6 details">
+          <p><b>Disease found : </b>{{ disease_name }}</p>
+          <p><b>Prediction Accuracy : </b>{{ accuracy }}%</p>
+          <p><b>Common Cure : </b>{{ preventive_measures }}</p>
+          <div class="try-next"> <a href="{{ url_for('home') }}">Try Next One</a></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Developed By:</p>
+    <ul>
+      <li>
+        <a href="https:facebook.com/R1j1n" target="_blank"><i class="fa fa-facebook-square"></i> Rajan Ghimire</a></li>
+      <li>
+        <a href="https:facebook.com/gprabes" target="_blank"><i class="fa fa-facebook-square"></i> Prabesh Ghimire</a></li>
+    </ul>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
