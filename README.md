@@ -1,6 +1,7 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)<br>
 [![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)<br>
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+
 # CropDiseaseDiag
 This is a complete webapp that uses Flask microframework for plant disease detection.
 This repository aims to detect diseases that occur on the maize plants using Convolutional Neural Network and Transfer Learning. Currently, the model is able to predict major 3 diseases that occur on the leaves of the plant which are Corn grey leaf spot, Northern corn leaf blight, and Common Rust. The model is also able to predict healthily plant also.<br>
@@ -24,4 +25,4 @@ numpy==1.18.2
 Flask==1.1.2
 Pillow==7.1.1
 ```
-
+ ![visitors](https://visitor-badge.glitch.me/badge?page_id=page.https://github.com/R4j4n/Maize-Diseases-Detection)
